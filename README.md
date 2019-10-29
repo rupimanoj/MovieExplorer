@@ -1,6 +1,6 @@
 # MovieExplorer
 
-## Qeries files
+## Queries files
   * For creation of tables and insert queries - db_app/create_insert_queries.py
   * For queries to support high level cases in UI - db_app/function_queries.py
 ## Data
