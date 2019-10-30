@@ -1,0 +1,41 @@
+{
+    "title": "Add new movie",
+    "Description": "Details of a movie",
+    "type": "object",
+    "properties":{
+        "movie_name": {
+            "type": "string",
+            "title": "Movie Name"
+        },
+        "release_year": {
+            "type": "integer",
+            "title": "Released year"
+        },
+        "production_studio": {
+            "type": "string",
+            "title": "Production house"
+        },
+        "director": {
+            "type": "string",
+            "title": "Director"
+        },
+        "producer": {
+            "type": "string",
+            "title": "Producer"
+        },
+        "cast_and_crew": {
+            "type": "string",
+            "title": "Cast & Crew"
+        },
+        "language": {
+            "type": "string",
+            "title": "Language"
+        },
+        "movie_category": {
+            "type": "string",
+            "title": "Movie Category"
+        }
+    }
+}
+
+   

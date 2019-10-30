@@ -1,0 +1,12 @@
+{
+    "type": "object",
+    "required": [
+        "director_name"
+    ],
+    "properties":{
+        "director_name": {
+            "type": "string",
+            "title": "Director Name"
+        }
+    }
+}

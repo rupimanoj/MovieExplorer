@@ -1,0 +1,33 @@
+
+Given user email id, fetch details along with his average rating:
+
+select avg_rating, email, first_name, last_name from Users INNER JOIN (select user_email_id, avg(rating) as avg_rating from Ratings group by user_email_id) as bk1 on Users.email = 'vnyehs@prweb.com' and Users.email = bk1.user_email_id;
+
+Given user movie name and release year, fetch details along with his average rating:
+
+select avg_rating, movie_name, release_year from Movies INNER JOIN (select movie_id, avg(rating) as avg_rating from Ratings group by movie_id) as bk1 on Movies.movie_name = 'Uncut Gems' and Movies.release_year = 2019 and Movies.movie_id = bk1.movie_id;
+
+List of movies by a director:
+
+select avg_rating, movie_name, release_year from Movies INNER JOIN (select movie_id, avg(rating) as avg_rating from Ratings group by movie_id) as bk1 on Movies.movie_director = 'Clint Eastwood' and Movies.movie_id = bk1.movie_id;
+
+List of movies by a cast:
+
+Select * from (Select Movies.*, CastAndMovies.cast_name from Movies Inner Join CastAndMovies where cast_name = 'Zoey Deutch' and CastAndMovies.movie_id = Movies.movie_id) as CastMovies inner join (Select avg(rating),movie_id from Ratings group by movie_id) as bk2 on bk2.movie_id = CastMovies.movie_id;
+
+List of movies in a combination of director and cast:
+
+Select * from (Select Movies.*, CastAndMovies.cast_name from Movies Inner Join CastAndMovies where cast_name = 'Zoey Deutch' and movie_director = 'Max Winkler' and CastAndMovies.movie_id = Movies.movie_id) as CastMovies inner join (Select avg(rating),movie_id from Ratings group by movie_id) as bk2 on bk2.movie_id = CastMovies.movie_id;
+
+List of shows showing a movie in a city on a day.
+
+Select * from Movies join (Select Shows.*, Theaters.theater_name, Theaters.city from Theaters join Shows on Shows.theater_id = Theaters.theater_id and Theaters.city='San Antonio' and Shows.show_date = '2019-11-27') as temp on temp.movie_id = Movies.movie_id and movie_name = 'What Men Want' and release_year = 2019;
+
+List of shows in a theater in a city on given day.
+
+Select * from Movies inner join (Select Shows.*, Theaters.theater_name, Theaters.city from Theaters join Shows on Theaters.theater_id = Shows.theater_id and Shows.show_date = '2019-11-28' and Theaters.theater_name = 'Cinemark Movies 16' and Theaters.city='San Antonio') as temp2 on temp2.movie_id = Movies.movie_id;
+
+
+num_fields = len(cursor.description)
+field_names = [i[0] for i in cursor.description]
+cursor.column_names

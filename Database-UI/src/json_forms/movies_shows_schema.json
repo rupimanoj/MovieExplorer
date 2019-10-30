@@ -1,0 +1,24 @@
+{
+    "type": "object",
+    "required": [
+        "movie_name", "release_year", "city", "date"
+    ],
+    "properties":{
+        "movie_name": {
+            "type": "string",
+            "title": "Movie Name"
+        },
+        "release_year": {
+            "type": "string",
+            "title": "Release year"
+        },
+        "city": {
+            "type": "string",
+            "title": "City"
+        },
+        "date": {
+            "type": "string",
+            "title": "Date"
+        }
+    }
+}

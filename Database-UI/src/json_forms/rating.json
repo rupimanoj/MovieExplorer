@@ -1,0 +1,26 @@
+{
+    "title": "Add new review",
+    "Description": "Details of a movie",
+    "type": "object",
+    "required": [
+        "movie_name", "release_year", "user_email_id", "rating"
+    ],
+    "properties":{
+        "movie_name": {
+            "type": "string",
+            "title": "Movie Name"
+        },
+        "release_year": {
+            "type": "integer",
+            "title": "Released year"
+        },
+        "user_email_id": {
+            "type": "string",
+            "title": "User Email Id"
+        },
+        "rating": {
+            "type": "integer",
+            "title": "Rating"
+        }
+    }
+}

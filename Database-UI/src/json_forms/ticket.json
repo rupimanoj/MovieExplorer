@@ -1,0 +1,30 @@
+{
+    "title": "Ticket Details",
+    "Description": "Details of ticket",
+    "type": "object",
+    "required": [
+        "Screen Name", "Theatre Name", "Opening Time", "Closing Time", "Total Seats"
+    ],
+    "properties":{
+        "Screen Name": {
+            "type": "string",
+            "title": "Screen Name"
+        },
+        "Theatre Name": {
+            "type": "string",
+            "title": "Theatre Name"
+        },
+        "Opening Time": {
+            "type": "string",
+            "title": "Opening Time"
+        },
+        "Closing Time": {
+            "type": "string",
+            "title": "Closing Time"
+        },
+        "Total Seats": {
+            "type": "integer",
+            "title": "Total Seats"
+        }
+    }
+}

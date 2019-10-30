@@ -1,0 +1,12 @@
+{
+    "type": "object",
+    "required": [
+        "cast_name"
+    ],
+    "properties":{
+        "cast_name": {
+            "type": "string",
+            "title": "Cast Name"
+        }
+    }
+}

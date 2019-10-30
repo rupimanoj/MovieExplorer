@@ -1,0 +1,16 @@
+{
+    "type": "object",
+    "required": [
+        "cast_name", "director_name"
+    ],
+    "properties":{
+        "cast_name": {
+            "type": "string",
+            "title": "Cast Name"
+        },
+        "director_name": {
+            "type": "string",
+            "title": "Director Name"
+        }
+    }
+}

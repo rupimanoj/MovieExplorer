@@ -1,0 +1,40 @@
+{
+
+    "title": "Add New Show",
+    "Description": "Details of Show",
+    "type": "object",
+    "required": [
+        "screen_name", "theater_name", "city", "movie_name", "show_start_time",
+         "show_end_time", "show_date"
+    ],
+    "properties":{
+        "theater_name": {
+            "type": "string",
+            "title": "Theatre Name"
+        },
+        "city": {
+            "type": "string",
+            "title": "Theatre City"
+        },
+        "screen_name": {
+            "type": "string",
+            "title": "Screen Name"
+        },
+        "movie_name": {
+            "type": "string",
+            "title": "Movie Name"
+        },
+        "show_start_time": {
+            "type": "string",
+            "title": "Opening Time"
+        },
+        "show_end_time": {
+            "type": "string",
+            "title": "Closing Time"
+        },
+        "show_date": {
+            "type": "string",
+            "title": "Show Date"
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "required": [
+        "theater_name", "city", "date"
+    ],
+    "properties":{
+        "theater_name": {
+            "type": "string",
+            "title": "Theater Name"
+        },
+        "city": {
+            "type": "string",
+            "title": "City"
+        },
+        "date": {
+            "type": "string",
+            "title": "Date"
+        }
+    }
+}
